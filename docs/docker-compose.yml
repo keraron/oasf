@@ -1,0 +1,14 @@
+# Local documentation site (MkDocs Material). From repo root: docker compose -f docs/docker-compose.yml up --build
+# Open http://127.0.0.1:8000
+
+services:
+  mkdocs:
+    image: python:3.12-slim-bookworm
+    working_dir: /work/docs/mkdocs
+    ports:
+      - "8000:8000"
+    volumes:
+      - ..:/work
+    command: >
+      sh -c "pip install --no-cache-dir -q -r /work/docs/requirements.txt &&
+             mkdocs serve -f /work/docs/mkdocs/mkdocs.yml -a 0.0.0.0:8000"

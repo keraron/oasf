@@ -1,0 +1,1619 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://schema.oasf.outshift.com/1.0.0/contributing/">
+      
+      
+        <link rel="prev" href="../agent-record-guide/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/agntcy/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>OASF Contribution Guide - OASF Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/agntcy-docs.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#oasf-contribution-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="OASF Documentation" class="md-header__button md-logo" aria-label="OASF Documentation" data-md-component="logo">
+      <img src="../assets/agntcy/img/logo-light.svg" alt="logo" class="logo-light" />
+<img src="../assets/agntcy/img/logo-dark.svg" alt="logo" class="logo-dark" />
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OASF Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              OASF Contribution Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/agntcy/oasf" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    agntcy/oasf
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="OASF Documentation" class="md-nav__button md-logo" aria-label="OASF Documentation" data-md-component="logo">
+      <img src="../assets/agntcy/img/logo-light.svg" alt="logo" class="logo-light" />
+<img src="../assets/agntcy/img/logo-dark.svg" alt="logo" class="logo-dark" />
+    </a>
+    OASF Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/agntcy/oasf" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    agntcy/oasf
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Open Agentic Schema Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oasf-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Open Agentic Schema Framework Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Open Agentic Schema Framework SDK
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Open Agentic Schema Framework SDK
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oasf-sdk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OASF SDK
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../decoding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Decoding Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../translation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Translation Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../validation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Validation Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../validation-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Validation Comparison
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent-record-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OASF Record Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OASF Contribution Guide
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OASF Contribution Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-oasf-terminology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key OASF Terminology
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-add-to-the-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Add to the Schema
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to Add to the Schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-or-modifying-a-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding or Modifying a class
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-or-modifying-an-attribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding or Modifying an attribute
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding or Modifying an attribute">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defining-a-field-in-the-dictionary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defining a field in the Dictionary
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defining-an-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defining an object
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deprecating-an-attribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deprecating an Attribute
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verifying-the-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verifying the changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oasf-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OASF Extensions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OASF Extensions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reserve-a-uid-and-name-for-your-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reserve a UID and Name for Your Extension
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-your-extensions-subdirectory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create Your Extension's Subdirectory
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reporting-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reporting Issues
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sending-pull-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sending Pull Requests
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developers-certificate-of-origin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Developer’s Certificate of Origin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-ways-to-contribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other Ways to Contribute
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-oasf-terminology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key OASF Terminology
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-add-to-the-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Add to the Schema
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to Add to the Schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-or-modifying-a-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding or Modifying a class
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-or-modifying-an-attribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding or Modifying an attribute
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding or Modifying an attribute">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defining-a-field-in-the-dictionary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defining a field in the Dictionary
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defining-an-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defining an object
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deprecating-an-attribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deprecating an Attribute
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verifying-the-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verifying the changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oasf-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OASF Extensions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OASF Extensions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reserve-a-uid-and-name-for-your-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reserve a UID and Name for Your Extension
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-your-extensions-subdirectory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create Your Extension's Subdirectory
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reporting-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reporting Issues
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sending-pull-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sending Pull Requests
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developers-certificate-of-origin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Developer’s Certificate of Origin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-ways-to-contribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other Ways to Contribute
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/agntcy/oasf/edit/main/docs/oasf/contributing.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/agntcy/oasf/raw/main/docs/oasf/contributing.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="oasf-contribution-guide">OASF Contribution Guide</h1>
+<p>Thanks for your interest in contributing to Open Agentic Schema Framework!
+Here are a few general guidelines on contributing and reporting bugs that we ask
+you to review.
+Following these guidelines helps to communicate that you respect the time of the
+contributors managing and developing this open source project.
+In return, they should reciprocate that respect in addressing your issue,
+assessing changes, and helping you finalize your pull requests.
+In that spirit of mutual respect, we endeavor to review incoming issues and pull
+requests within 10 days, and will close any lingering issues or pull requests
+after 60 days of inactivity.</p>
+<p>Please note that all of your interactions in the project are subject to our
+<a href="https://github.com/agntcy/oasf/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>.
+This includes creation of issues or pull requests, commenting on issues or pull
+requests, and extends to all interactions in any real-time space for example,
+Slack, Discord, and others.</p>
+<p>This documentation presents guidelines and expected etiquette to successfully
+contribute to the development of OASF Schemas and the framework itself.</p>
+<h2 id="key-oasf-terminology">Key OASF Terminology</h2>
+<ul>
+<li><strong>Field</strong>:
+  A field is a unique identifier name for a piece of data contained in OASF.
+  Each field also designates a corresponding <code>data_type</code>.</li>
+<li><strong>Object</strong>:
+  An object is a collection of contextually related fields and other objects.
+  It is also a <code>data_type</code> in OASF.</li>
+<li><strong>Class</strong>:
+  A class is a particular set of attributes (including fields &amp; objects)
+  representing metadata associated to an OASF record.
+  It is also a <code>data_type</code> in OASF.</li>
+<li><strong>Class Family</strong>:
+  Classes are currently grouped into 3 families:
+  Skills, Domains, and Modules.</li>
+<li><strong>Entity</strong>:
+  An entity is a more generic name for both objects and classes.</li>
+<li><strong>Attribute</strong>:
+  An attribute is the more generic name for both fields and entities in OASF.
+  A field is a scalar attribute while an entity is a complex attribute.</li>
+<li><strong>Category:</strong> A Category organizes classes that represent a particular domain.</li>
+</ul>
+<h2 id="how-to-add-to-the-schema">How to Add to the Schema</h2>
+<h3 id="adding-or-modifying-a-class">Adding or Modifying a <code>class</code></h3>
+<ol>
+<li>Determine where in the taxonomy of the class family you would want to add the
+   new <code>class</code>.</li>
+<li>Create a new file → <code>&lt;class_name.json&gt;</code> inside the family and category
+   specific subdirectory in the
+   <a href="https://github.com/agntcy/oasf/tree/main/schema">/schema</a> folder.
+   Template available
+   <a href="https://github.com/agntcy/oasf/blob/main/schema/templates/class_name.json">here</a>.</li>
+<li>Define the <code>class</code> itself.</li>
+<li>In case of a <code>module</code> class, make sure to overwrite the <code>data</code> attribute with
+   a new object containing all the module-specific attributes →
+   <a href="#defining-an-object">Defining an <code>object</code></a>.</li>
+<li>Finally, verify the changes are working as expected in your local
+   <a href="https://github.com/agntcy/oasf/tree/main/server">oasf/server</a>.</li>
+</ol>
+<h3 id="adding-or-modifying-an-attribute">Adding or Modifying an <code>attribute</code></h3>
+<ol>
+<li>All the available <code>attributes</code> - <code>fields</code> &amp; <code>objects</code> in OASF are and will need to be defined in the attribute dictionary, the <a href="https://github.com/agntcy/oasf/blob/main/schema/dictionary.json">dictionary.json</a> file and <a href="https://github.com/agntcy/oasf/tree/main/schema/objects">/objects</a> folder if defining an object.</li>
+<li>Determine if a new attribute is required for your change, it might already be defined in the attribute dictionary and/or the <a href="https://github.com/agntcy/oasf/tree/main/schema/objects">/objects</a> folder.</li>
+<li>
+<p>Before adding a new attribute, review the following OASF attribute conventions:</p>
+<ul>
+<li>Attribute names must be a valid UTF-8 sequence.</li>
+<li>Attribute names must be all lowercase.</li>
+<li>Combine words using underscore.</li>
+<li>No special characters except underscore.</li>
+<li>Use present tense unless the attribute describes historical information.</li>
+<li>Use singular and plural names properly to reflect the field content.</li>
+<li>When attribute represents multiple entities, the attribute name should be pluralized and the value type should be an array.</li>
+<li>Avoid repetition of words.</li>
+<li>Avoid abbreviations when possible. Some exceptions can be made for well-accepted abbreviation like well known acronyms (for example, LLM, AI).</li>
+<li>If the attribute can only be related to a <code>module</code> class, prefix its name with the module's name.</li>
+<li>If the attribute is supposed to hold sensitive data such as API keys, use the <code>env_vars</code> attribute instead, which enables record publishers to mandate the presence of environment variables holding such sensitive information.</li>
+</ul>
+</li>
+</ol>
+<h4 id="defining-a-field-in-the-dictionary">Defining a <code>field</code> in the Dictionary</h4>
+<p>To add a new field in OASF, you need to define it in the
+<a href="https://github.com/agntcy/oasf/blob/main/schema/dictionary.json">dictionary.json</a>
+file as described below.</p>
+<p>Sample entry in the dictionary:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;caption&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Name&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The name of the entity. See specific usage.&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string_t&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Choose a <strong>unique</strong> field you want to add, <code>name</code> in the example above and
+populate it as described below.</p>
+<ol>
+<li><code>caption</code>: Add a user-friendly name to the field.</li>
+<li>
+<p><code>description</code>: Add concise description to define the attributes.</p>
+<details class="note">
+<summary>Note</summary>
+<p><code>field</code> descriptions can be overridden in the <code>class/object</code>, therefore if it’s a common field (like name, label, uid, etc.) feel free to add a generic description, specific descriptions can be added in the <code>class/object</code> definition. For example:</p>
+<p>A generic definition of <code>name</code> in the dictionary:
+    1. <code>name</code>: <code>The name of the entity. See specific usage.</code></p>
+<p>Specific description of <code>name</code> in the <code>record</code> object:
+    1. <code>name</code>: <code>The name of the record. For example: &lt;code&gt;Marketing Strategy Agent&lt;/code&gt;.</code></p>
+</details>
+</li>
+<li>
+<p><code>type</code>: Review OASF data_types and ensure you utilize appropriate types
+   while defining new fields.</p>
+<ul>
+<li>All the available data_types can be accessed <a href="https://schema.oasf.outshift.com/data_types">here</a>.</li>
+<li>They are also accessible in your <a href="http://localhost:8080/data_types">local instance of the OASF server</a>.</li>
+</ul>
+</li>
+<li><code>is_array</code>: This a boolean key:value pair that you would need to add if the field you are defining is an array.</li>
+</ol>
+<h4 id="defining-an-object">Defining an <code>object</code></h4>
+<ol>
+<li>All the available <code>objects</code> need to be defined as individual field entries in
+   the dictionary, the
+   <a href="https://github.com/agntcy/oasf/blob/main/schema/dictionary.json">dictionary.json</a>
+   file and as distinct <code>.json</code> files in the
+   <a href="https://github.com/agntcy/oasf/tree/main/schema/objects">/objects</a> folder.</li>
+<li>Review existing Objects, determine if a modification of the existing object
+   would be sufficient or if there’s a need for a completely new object.</li>
+<li>
+<p>Use the template
+   <a href="https://github.com/agntcy/oasf/blob/main/schema/templates/object_name.json">available here</a>,
+   to get started with <code>.json</code> file definition.
+   An example <code>locator.json</code> object file:
+   <div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;caption&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Record Locator&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Locators provide actual artifact locators of the data&#39;s record. For example, this can reference sources such as Helm charts, Docker images, binaries, and so on.&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;extends&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;locator&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;caption&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Type&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Describes the type of the release manifest pointed by its URI. Allowed values MAY be defined for common manifest types.&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;requirement&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;required&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;unspecified&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;caption&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Unspecified&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;helm_chart&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;caption&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Helm Chart&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;docker_image&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;caption&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Docker Image&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;python_package&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;caption&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Python Package&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;source_code&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;caption&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Source Code&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;binary&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;caption&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Binary&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;caption&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;URL&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Specifies an URI from which this object MAY be downloaded. Value MUST conform to RFC 3986. Value SHOULD use the http and https schemes, as defined in RFC 7230.&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;requirement&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;required&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;annotations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;caption&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Annotations&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Additional metadata associated with the record locator.&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;requirement&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;optional&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;size&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;caption&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Size&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Specifies the size of the release manifest in bytes.&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;requirement&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;optional&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;digest&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;caption&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Digest&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Specifies the digest of the release manifest contents.&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;requirement&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;optional&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><code>caption</code> → Add a user-friendly name to the object.</p>
+</li>
+<li>
+<p><code>description</code> → Add a concise description to define the object.</p>
+</li>
+<li>
+<p><code>extends</code> → Ensure the value is <code>object</code> or an existing object, e.g.
+   <code>extension_data</code> (All objects in OASF must extend a base definition of
+   <code>object</code> or another existing object.)</p>
+</li>
+<li>
+<p><code>name</code> → Add a <strong>unique</strong> name of the object.
+   <code>name</code> must match the filename of the actual <code>.json</code> file.</p>
+</li>
+<li>
+<p><code>attributes</code> → Add the attributes that you want to define in the object,</p>
+<ol>
+<li><code>requirement</code> → For each attribute ensure you add a requirement value.
+   Valid values are <code>optional</code>, <code>required</code>, <code>recommended</code></li>
+<li><code>$include</code> → You can include attributes from other places; to do so,
+   specify a virtual attribute called <code>$include</code> and give its value as the
+   list of files (relative to the root of the schema repository) that should
+   contribute their attributes to this object.
+   <em>e.g.</em>
+   <div class="highlight"><pre><span></span><code><span class="nt">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;$include&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;profiles/host.json&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="err">...</span>
+<span class="p">}</span>
+</code></pre></div></li>
+<li><code>reference</code> → If the attribute's name differs from the name of the
+   attribute in the dictionary, you can specify the name of the dictionary
+   entry here.</li>
+<li><code>references</code> → You can add a list of web links as references to the
+   object.
+   <em>e.g.</em>
+  <div class="highlight"><pre><span></span><code><span class="nt">&quot;references&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A2A Card Data Schema&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://github.com/google-a2a/A2A/blob/main/docs/specification.md#55-agentcard-object-structure&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div></li>
+</ol>
+</li>
+<li>
+<p><code>constraints</code> → For each class you can add constraints on the attribute
+   requirements.
+   Valid constraint types are <code>at_least_one</code>, <code>just_one</code>.
+   <em>e.g.</em>
+   <div class="highlight"><pre><span></span><code><span class="nt">&quot;constraints&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;at_least_one&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;id&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;name&quot;</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><code>references</code> → You can add a list of web links as references to the object.
+    <em>e.g.</em>
+    <div class="highlight"><pre><span></span><code><span class="nt">&quot;references&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A2A Card Data Schema&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://github.com/google-a2a/A2A/blob/main/docs/specification.md#55-agentcard-object-structure&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div></p>
+</li>
+</ol>
+<p><strong>Note:</strong> If you want to create an object which would act only as a base for
+other objects (without it being used as an enum object), you must prefix the
+object <code>name</code> and the actual <code>json</code> filename with an <code>_</code>.
+The resultant object will not be visible in the
+<a href="https://schema.oasf.outshift.com/objects">OASF Server</a>.</p>
+<p>Sample entry in the <code>dictionary.json</code>,</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;locators&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;caption&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Record Locators&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Locators provide actual artifact locators of the data&#39;s record. For example, this can reference sources such as helm charts, docker images, binaries, and so on.&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;locator&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;is_array&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Choose a unique object you want to add, <code>locators</code> in the example above and
+populate it as described below.</p>
+<ol>
+<li><code>caption</code>: Add a user-friendly name to the object.</li>
+<li><code>description</code>: Add a concise description to define the object.</li>
+<li><code>type</code>: Add the type of the object you are defining.</li>
+<li><code>is_array</code>: This a boolean key:value pair that you would need to add if the object you are defining is an array.</li>
+<li><code>is_enum</code>: This a boolean key:value pair that you would need to add if the attribute you are defining is a <code>class/object</code> and only the entities extending the <code>class/object</code> are accepted as a value.</li>
+</ol>
+<h3 id="deprecating-an-attribute">Deprecating an Attribute</h3>
+<p>To deprecate an attribute (<code>field</code>, <code>object</code>) follow the steps below:</p>
+<ol>
+<li>Create a GitHub issue, explaining why an attribute needs to be deprecated and
+   what the alternate solution is.</li>
+<li>
+<p>Utilize the following flag to allow deprecation of attributes.
+   This flag needs to be added a json property of the attribute that is the
+   subject of deprecation.
+    <div class="highlight"><pre><span></span><code><span class="nt">&quot;@deprecated&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Use the &lt;code&gt; ALTERNATE_ATTRIBUTE &lt;/code&gt; attribute instead.&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;since&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;semver&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Example of a deprecated field
+   <div class="highlight"><pre><span></span><code><span class="nt">&quot;packages&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;@deprecated&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Use the &lt;code&gt; affected_packages &lt;/code&gt; attribute instead.&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;since&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0.0&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;caption&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Software Packages&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;List of vulnerable packages as identified by the security product&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;is_array&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;package&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Example of a deprecated object
+    <div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;caption&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Finding&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The Finding object describes metadata related to a security finding generated by a security tool or system.&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;extends&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;finding&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;@deprecated&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Use the new &lt;code&gt;finding_info&lt;/code&gt; object.&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;since&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0.0&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+</ol>
+<h3 id="verifying-the-changes">Verifying the changes</h3>
+<p>Contributors should verify the changes before they submit the PR, the best
+method to run the test suite:</p>
+<div class="highlight"><pre><span></span><code>task<span class="w"> </span><span class="nb">test</span>
+</code></pre></div>
+<p>To test and verify changes with a local instance of the
+<a href="https://github.com/agntcy/oasf/tree/main/server">oasf/server</a>, follow the
+<a href="https://github.com/agntcy/oasf/blob/main/README.md#deploy-locally">instructions here</a>
+to deploy in a local Kind cluster, or
+<a href="https://github.com/agntcy/oasf/blob/main/server/README.md">here</a> to set your
+own local OASF server using Elixir tooling.</p>
+<p>Address the errors before submitting the changes, your server run should be
+completely error free.</p>
+<h2 id="oasf-extensions">OASF Extensions</h2>
+<p>The OASF Schema can be extended by adding an extension that defines additional
+attributes, objects, profiles, classes, or categories.
+Extensions allow one to create vendor/customer specific schemas or augment an
+existing schema to better suit their custom requirements.
+Extensions can also be used to factor out non-essential schema domains keeping
+the core schema succinct.
+Extensions use the framework in the same way as a new schema, optionally
+creating categories, profiles, or classes from the dictionary.</p>
+<p>As with categories and classes, extensions have unique IDs within the framework
+as well as their own versioning.
+The following sections provide guidelines to create extensions within OASF.</p>
+<h3 id="reserve-a-uid-and-name-for-your-extension">Reserve a UID and Name for Your Extension</h3>
+<p>In order to reserve an ID space, and make your extension public, add a unique
+identifier &amp; a unique name for your extension in the OASF Extensions Registry
+<a href="https://github.com/agntcy/oasf/blob/main/schema/extensions.md">here</a>.
+This is done to avoid collisions with core or other extension schemas.
+For example, a new sample extension would have a row in the table as follows:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Caption</strong></th>
+<th><strong>Name</strong></th>
+<th><strong>UID</strong></th>
+<th><strong>Notes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New Extension</td>
+<td>new_ex</td>
+<td>123</td>
+<td>The development schema extensions</td>
+</tr>
+</tbody>
+</table>
+<h3 id="create-your-extensions-subdirectory">Create Your Extension's Subdirectory</h3>
+<p>To extend the schema, create a new subdirectory in the <code>extensions</code> directory,
+and add a new <code>extension.json</code> file, which defines the extension's <code>name</code> and
+<code>uid</code>.
+For example:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;caption&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;New Extension&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;new_ex&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;uid&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0.0.0&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The extension's directory structure is the same as the top level schema
+directory, and it may contain the following files and subdirectories, depending
+on what type of extension is desired:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>main_skills.json</code></td>
+<td>Create it to define new skill categories.</td>
+</tr>
+<tr>
+<td><code>main_domains.json</code></td>
+<td>Create it to define new domain categories.</td>
+</tr>
+<tr>
+<td><code>main_modules.json</code></td>
+<td>Create it to define new module categories.</td>
+</tr>
+<tr>
+<td><code>dictionary.json</code></td>
+<td>Create it to define new attributes.</td>
+</tr>
+<tr>
+<td><code>skills</code></td>
+<td>Create it to define new skill classes.</td>
+</tr>
+<tr>
+<td><code>domains</code></td>
+<td>Create it to define new domain classes.</td>
+</tr>
+<tr>
+<td><code>modules</code></td>
+<td>Create it to define new module classes.</td>
+</tr>
+<tr>
+<td><code>objects</code></td>
+<td>Create it to define new objects.</td>
+</tr>
+<tr>
+<td><code>profiles</code></td>
+<td>Create it to define new profiles.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="reporting-issues">Reporting Issues</h2>
+<p>Before reporting a new issue, please ensure that the issue was not already
+reported or fixed by searching through our
+<a href="https://github.com/agntcy/oasf/issues">issues list</a>.</p>
+<p>When creating a new issue, please be sure to include a <strong>title and clear
+description</strong>, as much relevant information as possible, and, if possible, a
+test case.</p>
+<p><strong>If you discover a security bug, please do not report it through GitHub.
+Instead, please see security procedures in
+<a href="https://github.com/agntcy/oasf/blob/main/SECURITY.md">SECURITY.md</a>.</strong></p>
+<h2 id="sending-pull-requests">Sending Pull Requests</h2>
+<p>Before sending a new pull request, take a look at existing pull requests and
+issues to see if the proposed change or fix has been discussed in the past, or
+if the change was already implemented but not yet released.</p>
+<p>We expect new pull requests to include tests for any affected behavior, and, as
+we follow semantic versioning, we may reserve breaking changes until the next
+major version release.</p>
+<h2 id="developers-certificate-of-origin">Developer’s Certificate of Origin</h2>
+<p>To improve tracking of who did what, we have introduced a “sign-off” procedure.
+The sign-off is a line at the end of the explanation for the commit, which
+certifies that you wrote it or otherwise have the right to pass it on as open
+source work.
+We use the Developer Certificate of Origin (see
+https://developercertificate.org/) for our sign-off procedure.
+You must include a sign-off in the commit message of your pull request for it to
+be accepted.
+The format for a sign-off is:</p>
+<div class="highlight"><pre><span></span><code>Signed-off-by: Random J Developer &lt;random@developer.example.org&gt;
+</code></pre></div>
+<p>You can use the -s when you do a git commit to simplify including a properly
+formatted sign-off in your commits.
+If you need to add your sign-off to a commit you have already made, you will
+need to amend:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>commit<span class="w"> </span>--amend<span class="w"> </span>--signoff
+</code></pre></div>
+<h2 id="other-ways-to-contribute">Other Ways to Contribute</h2>
+<p>We welcome anyone that wants to contribute to OASF to triage and reply to open
+issues to help troubleshoot and fix existing bugs.
+Here is what you can do:</p>
+<ul>
+<li>Help ensure that existing issues follows the recommendations from the
+  <em><a href="#reporting-issues">Reporting Issues</a></em> section, providing feedback to the
+  issue's author on what might be missing.</li>
+<li>Review and update the existing content of our
+  <a href="https://docs.agntcy.org/oasf/open-agentic-schema-framework">docs</a> with
+  up-to-date instructions and code samples.</li>
+<li>Review existing pull requests, and testing patches against real existing
+  applications that use <code>OASF</code>.</li>
+<li>Write a test, or add a missing test case to an existing test.</li>
+</ul>
+<p>Thanks again for your interest on contributing to <code>OASF</code>!</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../agent-record-guide/" class="md-footer__link md-footer__link--prev" aria-label="Previous: OASF Record Guide">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                OASF Record Guide
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div style="text-align: center; font-size: 0.75rem; margin-top: 1rem; color: var(--md-default-fg-color--light);">
+  Copyright &copy; AGNTCY Contributors
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": ["latest"], "provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

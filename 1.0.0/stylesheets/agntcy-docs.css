@@ -179,3 +179,41 @@ html [data-md-color-primary=black] .md-nav--primary .md-nav__title[for=__drawer]
   border-color: var(--md-default-fg-color--lightest);
   background-color: var(--md-code-bg-color);
 }
+
+/* CTA under primary sidebar — matches logo / primary palette */
+.agntcy-docs-nav {
+  margin: 0.5rem 0.5rem 0.75rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.agntcy-docs-nav__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 !important;
+  padding: 0.55rem 0.65rem !important;
+  font-weight: 700 !important;
+  font-size: 0.72rem !important;
+  line-height: 1.25 !important;
+  text-align: center;
+  border-radius: 0.25rem !important;
+  text-decoration: none !important;
+  background-color: var(--md-primary-bg-color) !important;
+  color: var(--md-primary-fg-color) !important;
+  border: 1px solid color-mix(in srgb, var(--md-primary-bg-color) 85%, transparent);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  transition:
+    filter 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.agntcy-docs-nav__button:hover {
+  filter: brightness(1.06);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.agntcy-docs-nav__button:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+}

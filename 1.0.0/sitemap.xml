@@ -2,38 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://schema.oasf.outshift.com/1.0.0/</loc>
-         <lastmod>2026-04-20</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
     <url>
          <loc>https://schema.oasf.outshift.com/1.0.0/agent-record-guide/</loc>
-         <lastmod>2026-04-20</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
     <url>
          <loc>https://schema.oasf.outshift.com/1.0.0/contributing/</loc>
-         <lastmod>2026-04-20</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
     <url>
          <loc>https://schema.oasf.outshift.com/1.0.0/decoding/</loc>
-         <lastmod>2026-04-20</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
     <url>
          <loc>https://schema.oasf.outshift.com/1.0.0/oasf-sdk/</loc>
-         <lastmod>2026-04-20</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
     <url>
          <loc>https://schema.oasf.outshift.com/1.0.0/oasf-server/</loc>
-         <lastmod>2026-04-20</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
     <url>
          <loc>https://schema.oasf.outshift.com/1.0.0/translation/</loc>
-         <lastmod>2026-04-20</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
     <url>
          <loc>https://schema.oasf.outshift.com/1.0.0/validation-comparison/</loc>
-         <lastmod>2026-04-20</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
     <url>
          <loc>https://schema.oasf.outshift.com/1.0.0/validation/</loc>
-         <lastmod>2026-04-20</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
 </urlset>

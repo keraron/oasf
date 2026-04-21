@@ -1,0 +1,38 @@
+{#-
+  Extends Material primary sidebar: adds AGNTCY org docs CTA below the nav list.
+  Upstream: mkdocs-material partials/nav.html (sync on Material upgrades if needed).
+-#}
+{% import "partials/nav-item.html" as item with context %}
+{% set class = "md-nav md-nav--primary" %}
+{% if "navigation.tabs" in features %}
+  {% set class = class ~ " md-nav--lifted" %}
+{% endif %}
+{% if "toc.integrate" in features %}
+  {% set class = class ~ " md-nav--integrated" %}
+{% endif %}
+{% set agntcy_docs_href = config.extra.agntcy_docs_url | default("https://docs.agntcy.org/", true) %}
+{% set agntcy_docs_label = config.extra.agntcy_docs_label | default("AGNTCY Documentation", true) %}
+<nav class="{{ class }}" aria-label="{{ lang.t('nav') }}" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}" title="{{ config.site_name | e }}" class="md-nav__button md-logo" aria-label="{{ config.site_name }}" data-md-component="logo">
+      {% include "partials/logo.html" %}
+    </a>
+    {{ config.site_name }}
+  </label>
+  {% if config.repo_url %}
+    <div class="md-nav__source">
+      {% include "partials/source.html" %}
+    </div>
+  {% endif %}
+  <ul class="md-nav__list" data-md-scrollfix>
+    {% for nav_item in nav.items %}
+      {% set path = "__nav_" ~ loop.index %}
+      {{ item.render(nav_item, path, 1) }}
+    {% endfor %}
+  </ul>
+  <div class="agntcy-docs-nav">
+    <a href="{{ agntcy_docs_href | url }}" class="agntcy-docs-nav__button md-nav__link" rel="noopener noreferrer" target="_blank" title="{{ agntcy_docs_label | e }} (opens in new tab)">
+      {{ agntcy_docs_label | e }}
+    </a>
+  </div>
+</nav>

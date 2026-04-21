@@ -8,14 +8,17 @@ version: "3"
 interval: "500ms"
 
 vars:
-  DOCS: "{{.TASKFILE_DIR}}"
+  # Parent-include runs with an empty TASKFILE_DIR; resolve from git root instead.
   REPO:
-    sh: cd "{{.TASKFILE_DIR}}/.." && pwd
-  MKDOCS: "{{.TASKFILE_DIR}}/mkdocs"
+    sh: git rev-parse --show-toplevel 2>/dev/null || pwd
+  DOCS: "{{.REPO}}/docs"
+  MKDOCS: "{{.REPO}}/docs/mkdocs"
   BUILD_SITE: "{{.REPO}}/.build/site"
-  SPELL_CONFIG: "{{.TASKFILE_DIR}}/codespellrc"
-  MD_CONFIG: "{{.TASKFILE_DIR}}/pymarkdown.yaml"
-  LYCHEE_CONFIG: "{{.TASKFILE_DIR}}/lychee.toml"
+  SPELL_CONFIG: "{{.REPO}}/docs/codespellrc"
+  MD_CONFIG: "{{.REPO}}/docs/pymarkdown.yaml"
+  LYCHEE_CONFIG: "{{.REPO}}/docs/lychee.toml"
+  # docs:run uses 8000; keep mike on 8001 unless you override MIKE_SERVE_ADDR on the CLI.
+  MIKE_SERVE_ADDR: "127.0.0.1:8001"
 
 tasks:
   default:
@@ -27,13 +30,13 @@ tasks:
     desc: Build documentation site to .build/site
     cmds:
       - mkdir -p "{{.BUILD_SITE}}"
-      - (cd "{{.MKDOCS}}" && mkdocs build --site-dir "{{.BUILD_SITE}}")
+      - (cd "{{.MKDOCS}}" && mkdocs build -f mkdocs.yml --site-dir "{{.BUILD_SITE}}")
       - 'echo "Docs built: file://{{.BUILD_SITE}}/index.html"'
 
   run:
     desc: Run mkdocs serve with live reload (http://127.0.0.1:8000)
     cmds:
-      - (cd "{{.MKDOCS}}" && mkdocs serve -a 127.0.0.1:8000)
+      - (cd "{{.MKDOCS}}" && mkdocs serve -f mkdocs.yml -a 127.0.0.1:8000)
 
   test:
     desc: Run all documentation lint checks
@@ -81,34 +84,35 @@ tasks:
   mike:deploy-local:
     desc: >-
       Deploy current docs to local gh-pages with version from mkdocs/mike_versions.ini [versions] local (+ latest alias); no git push
-    dir: "{{.MKDOCS}}"
     cmds:
-      - 'test -f mike_version.py || { echo "Missing mkdocs/mike_version.py"; exit 1; }'
-      - git fetch origin gh-pages --depth=1 2>/dev/null || true
+      - 'cd "{{.MKDOCS}}" && test -f mike_version.py || { echo "Missing docs/mkdocs/mike_version.py"; exit 1; }'
+      - cd "{{.REPO}}" && git fetch origin gh-pages --depth=1 2>/dev/null || true
       - |
         set -euo pipefail
+        cd "{{.MKDOCS}}"
         MIKE_LOCAL="$(python3 mike_version.py local)"
         mike deploy "$MIKE_LOCAL" latest --update-aliases
         mike set-default latest
         mike list
-        echo "Local gh-pages updated. Run task docs:mike:serve — http://127.0.0.1:8000/"
+        echo "Local gh-pages updated. Run: task docs:mike:serve  (http://{{.MIKE_SERVE_ADDR}} by default)"
 
   mike:deploy:
     desc: >-
       Push versioned docs to origin/gh-pages (mike). Set [versions] release in docs/mkdocs/mike_versions.ini or export VERSION=…
-    dir: "{{.MKDOCS}}"
     cmds:
-      - 'test -f mike_version.py || { echo "Missing mkdocs/mike_version.py"; exit 1; }'
-      - git fetch origin gh-pages --depth=1 2>/dev/null || true
+      - 'cd "{{.MKDOCS}}" && test -f mike_version.py || { echo "Missing docs/mkdocs/mike_version.py"; exit 1; }'
+      - cd "{{.REPO}}" && git fetch origin gh-pages --depth=1 2>/dev/null || true
       - |
         set -euo pipefail
+        cd "{{.MKDOCS}}"
         MIKE_VERSION="$(python3 mike_version.py release)"
         mike deploy --push --update-aliases "$MIKE_VERSION" latest
         mike set-default --push latest
         mike list
 
   mike:serve:
-    desc: Serve versioned site from local gh-pages (run docs:mike:deploy-local first)
-    dir: "{{.MKDOCS}}"
+    desc: >-
+      Serve versioned site from local gh-pages (run docs:mike:deploy-local first).
+      Default http://127.0.0.1:8001 (docs:run uses :8000). Override: task docs:mike:serve MIKE_SERVE_ADDR=127.0.0.1:PORT
     cmds:
-      - mike serve -a 127.0.0.1:8000
+      - cd "{{.MKDOCS}}" && mike serve -a "{{.MIKE_SERVE_ADDR}}"

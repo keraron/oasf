@@ -14,7 +14,11 @@ edit_uri: edit/main/docs/oasf/
 extra:
   version:
     provider: mike
+    default:
+      - latest
   copyright: Copyright &copy; AGNTCY Contributors
+  agntcy_docs_url: https://docs.agntcy.org/
+  agntcy_docs_label: AGNTCY Documentation
 
 extra_css:
   - stylesheets/agntcy-docs.css
@@ -45,8 +49,7 @@ plugins:
   mike:
     alias_type: redirect
   redirects:
-    redirect_maps:
-      index.md: open-agentic-schema-framework.md
+    redirect_maps: {}
   awesome-pages:
     filename: ".index"
     collapse_single_pages: true

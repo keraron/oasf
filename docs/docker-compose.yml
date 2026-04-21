@@ -1,5 +1,6 @@
 # Local documentation site (MkDocs Material). From repo root: docker compose -f docs/docker-compose.yml up --build
-# Open http://127.0.0.1:8000
+# Open http://127.0.0.1:8000  (site root is index.md in docs/oasf/)
+# For versioned previews from gh-pages use `mike serve` instead — the root URL layout differs from `mkdocs serve`.
 
 services:
   mkdocs:
